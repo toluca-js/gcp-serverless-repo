@@ -1,0 +1,19 @@
+{
+    "main": "dist/index.js",
+    "dependencies": {
+        "@google-cloud/functions-framework": "^3.0.0",
+        "gcp-metadata": "^5.2.0",
+        "pug": "^3.0.2",
+        "winston": "^3.2.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.20",
+        "typescript": "^4.9.5"
+    },
+    "scripts": {
+        "watch": "nodemon",
+        "build": "tsc",
+        "start": "npm run build;npx @google-cloud/functions-framework --target=web --port=8080 --source=./dist",
+        "gcp-build": "npm run build"
+    }
+}
